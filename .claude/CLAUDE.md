@@ -4,6 +4,17 @@ globs: "**/*.{ts,tsx,js,jsx}"
 alwaysApply: true
 ---
 
+# Style Guide
+
+## Core Principles
+
+-- ** Alway use Tailwind v4.1+** - Ensure the codebase is using the latest version
+-- ** Do not use deprecated or removed utilities** - Alwayss use the replacement
+-- ** Never use @apply** - Use css variables instead, the --spacing function, or framework components
+-- ** Check for redundant classes** - remove classes that arent necessary
+-- ** Group elements logically** - to simplify tweaks later
+-- ** Referance Global CSS** - use the global.css file for all styles
+
 # TypeScript Codebase Guidelines
 
 This document contains comprehensive TypeScript coding standards that should be followed when generating or modifying code in this project. These rules ensure type safety, performance, maintainability, and consistency across the codebase.
@@ -933,6 +944,7 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Make sure Promise-like statements are handled appropriately.
 - Don't use **dirname and **filename in the global scope.
 - Prevent import cycles.
+
 ## React & JSX Rules
 
 - Don't define React components inside other components.
