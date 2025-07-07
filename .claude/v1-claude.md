@@ -804,14 +804,6 @@ By following these guidelines, LLMs will generate TypeScript code that is:
 - Validated at runtime boundaries for external data
 - Full-stack type-safe from client to server
 
----
-
-# Enforcement Rules
-
-The following rules enforce the TypeScript guidelines above and provide additional code quality standards:
-
-## Accessibility Rules
-
 - Don't use `accessKey` attribute on any HTML element.
 - Don't set `aria-hidden="true"` on focusable elements.
 - Don't add ARIA roles, states, and properties to elements that don't support them.
@@ -834,9 +826,6 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Always include a `type` attribute for button elements.
 - Make elements with interactive roles and handlers focusable.
 - Give heading elements content that's accessible to screen readers (not hidden with `aria-hidden`).
-
-## HTML & Media Rules
-
 - Always include a `lang` attribute on the html element.
 - Always include a `title` attribute for iframe elements.
 - Accompany `onClick` with at least one of: `onKeyUp`, `onKeyDown`, or `onKeyPress`.
@@ -878,7 +867,7 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Don't use any or unknown as type constraints.
 - Don't initialize variables to undefined.
 - Don't use void operators (they're not familiar).
-- Follow functional-light programming patterns as defined in TypeScript guidelines.
+- Use arrow functions instead of function expressions.
 - Use Date.now() to get milliseconds since the Unix Epoch.
 - Use .flatMap() instead of map().flat() when possible.
 - Use literal property access instead of computed property access.
@@ -933,15 +922,10 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Make sure Promise-like statements are handled appropriately.
 - Don't use **dirname and **filename in the global scope.
 - Prevent import cycles.
-## React & JSX Rules
-
 - Don't define React components inside other components.
 - Don't use event handlers on non-interactive elements.
 - Don't assign to React component props.
 - Don't use configured elements.
-
-## Security Rules
-
 - Don't hardcode sensitive data like API keys and tokens.
 - Don't let variable declarations shadow variables from outer scopes.
 - Don't use the TypeScript directive @ts-ignore.
@@ -973,10 +957,10 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Don't use both `children` and `dangerouslySetInnerHTML` props on the same element.
 - Don't use global `eval()`.
 - Don't use callbacks in asynchronous tests and hooks.
-- Prefer `as const` objects over new enums (enforces TypeScript guidelines).
+- Don't use TypeScript enums.
 - Don't export imported variables.
 - Don't use `<head>` elements in Next.js projects.
-- Follow explicit typing patterns as defined in TypeScript guidelines (prefer explicit return types).
+- Don't add type annotations to variables, parameters, and class properties that are initialized with literal expressions.
 - Don't use TypeScript namespaces.
 - Don't use negation in `if` statements that have `else` clauses.
 - Don't use nested ternary expressions.
@@ -997,7 +981,7 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Follow curly brace conventions.
 - Use `else if` instead of nested `if` statements in `else` clauses.
 - Use single `if` statements instead of nested `if` clauses.
-- Use `Array<T>` syntax for all array types (enforces TypeScript guidelines).
+- Use either `T[]` or `Array<T>` consistently.
 - Use `new` for all builtins except `String`, `Number`, and `Boolean`.
 - Use consistent accessibility modifiers on class properties and methods.
 - Use `const` declarations for variables that are only assigned once.
@@ -1030,7 +1014,7 @@ The following rules enforce the TypeScript guidelines above and provide addition
 - Don't compare against -0.
 - Don't use labeled statements that aren't loops.
 - Don't use void type outside of generic or return types.
-- Use console appropriately based on development context (enforces TypeScript guidelines).
+- Don't use console.
 - Don't use TypeScript const enum.
 - Don't use control characters and escape sequences that match control characters in regular expression literals.
 - Don't use debugger.
