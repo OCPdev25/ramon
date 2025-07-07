@@ -1,0 +1,40 @@
+{
+  "project_type": "barbershop_booking_site",
+  "primary_goal": "Create an SEO-optimized website for a barbershop with integrated online booking using Square SDK",
+  "target_audience": "Local customers seeking barbershop services and online booking convenience",
+  "must_have_features": [
+    "SEO-optimized landing pages",
+    "Service menu with pricing",
+    "Online booking system integrated with Square",
+    "Mobile-responsive design",
+    "Contact information and location",
+    "Gallery of work/styles"
+  ],
+  "constraints": {
+    "technical": [
+      "Must integrate with existing Square POS system",
+      "SEO is critical for local search",
+      "Mobile-first design required"
+    ],
+    "timeline": "6 weeks for MVP",
+    "budget": "Small business budget"
+  },
+  "complexity_preference": "break_down_medium_high",
+  "integrations": [
+    "Square Booking API",
+    "Square Payments API",
+    "Google Maps",
+    "Google Business Profile"
+  ],
+  "session_history": [
+    {
+      "date": "2025-01-07T22:30:00Z",
+      "phase": "initial_planning",
+      "decisions": [
+        "Chose Astro for SEO benefits with static generation",
+        "Will use hybrid approach for dynamic booking features",
+        "Tailwind CSS v4 for styling"
+      ]
+    }
+  ]
+}
